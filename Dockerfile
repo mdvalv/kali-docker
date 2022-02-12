@@ -31,11 +31,13 @@ RUN apt-get update && apt-get install -y \
 	nmap \
 	openvpn \
 	onesixtyone \
+	perl-tk \
 	php \
 	python2 \
 	seclists \
 	smbmap \
 	snmp \
+	snmpcheck \
 	sqlmap \
 	steghide \
 	telnet \
