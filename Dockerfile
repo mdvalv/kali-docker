@@ -1,13 +1,53 @@
 FROM kalilinux/kali-rolling
 
-
-RUN apt-get update -y \
-	&& apt-get upgrade -y
-
-RUN apt-get install -y vim curl git wget iputils-ping net-tools masscan nmap wordlists seclists exploitdb ffuf \
-	gobuster hydra vim john curl host traceroute wfuzz hashcat hash-identifier binwalk git zip jq bsdmainutils xxd \
-	smbmap openvpn steghide whois sqlmap foremost exiv2 exifprobe enum4linux telnet metasploit-framework lynx wpscan \
-	virtualenv python2 golang netcat-traditional man-db ftp php default-mysql-client whatweb
+RUN apt-get update && apt-get install -y \
+	binwalk \
+	bsdmainutils \
+	curl \
+	default-mysql-client \
+	enum4linux \
+	exifprobe \
+	exiv2 \
+	exploitdb \
+	ffuf \
+	foremost \
+	ftp \
+	git \
+	gobuster \
+	golang \
+	hash-identifier \
+	hashcat \
+	host \
+	hydra \
+	iputils-ping \
+	john \
+	jq \
+	lynx \
+	man-db \
+	masscan \
+	metasploit-framework \
+	net-tools \
+	netcat-traditional \
+	nmap \
+	openvpn \
+	php \
+	python2 \
+	seclists \
+	smbmap \
+	sqlmap \
+	steghide \
+	telnet \
+	traceroute \
+	vim \
+	virtualenv \
+	wfuzz \
+	wget \
+	whatweb \
+	whois \
+	wordlists \
+	wpscan \
+	xxd \
+	zip
 
 WORKDIR /root
 
