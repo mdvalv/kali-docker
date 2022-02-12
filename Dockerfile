@@ -30,10 +30,12 @@ RUN apt-get update && apt-get install -y \
 	netcat-traditional \
 	nmap \
 	openvpn \
+	onesixtyone \
 	php \
 	python2 \
 	seclists \
 	smbmap \
+	snmp \
 	sqlmap \
 	steghide \
 	telnet \
