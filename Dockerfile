@@ -1,8 +1,10 @@
 FROM kalilinux/kali-rolling
 
 RUN apt-get update && apt-get install -y \
+	apktool \
 	binwalk \
 	bsdmainutils \
+	crackmapexec \
 	curl \
 	default-mysql-client \
 	enum4linux \
@@ -33,6 +35,7 @@ RUN apt-get update && apt-get install -y \
 	onesixtyone \
 	perl-tk \
 	php \
+	pngcheck \
 	python2 \
 	seclists \
 	smbmap \
@@ -62,5 +65,8 @@ ENV PATH "$PATH:/root/go/bin"
 
 RUN mkdir /opt/linpeas
 RUN curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -o /opt/linpeas/linpeas.sh
+
+RUN service postgresql start && \
+	msfdb init
 
 CMD ["bash"]
